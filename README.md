@@ -7,19 +7,33 @@
 
 1. 기본
   1-1 HTML5
+  
       HTML5의 기본 숙지   
+      
       여러 기본 페이지들을 만들어 보기 
+      
   1-2 CSS3
+  
       CSS3 기본 숙지 
+      
       이전단계 HTML 로 만들어보았던 페이지에 스타일을 입혀 보기 
+      
       해당 페이지를 grid 와 flexbox로 만들어 보기 ( display:flex; flex-direction:row; ....  ) 
+      
   1-3 JS기본
+  
       JS 기본 구문에 익숙해지기 ( var arr = []; arr.push('test'); )
+      
       기본 DOM 조작 사용하기  (document.querySelector, document.getElementById ... ) 
+      
       JS 동작에 매커니즘 이해하기 (hoisting, Event Bubbling, Event Capturing, Prototyping)
+      
       AJAX 호출 해보기 (GET,POST)
+      
       새로운 JS 기능들을 배우기 (ES6+)
+      
       jQuery 라이브러리를 추가적으로 쓰는 것에 익숙해지기
+      
 2. 일반적인개발 스킬 
       GIT 사용법
       HTTP 또는 HTTP 프로토콜 숙지 request method 숙지 (GET,POST,PUT,PATCH,DELETE,OPTIONS)
@@ -31,59 +45,103 @@
 3. 공식 웹사이트 또는 과목 코스들을 완주  리액트 관련
       
 4. 사용하여야 하는 툴들에 익숙해지기
+
   4-1 패키지 매니저
+  
       npm
+      
       yarn
+      
       pnpm
+      
   4-2 작업 실행
+  
       npm scripts
+      
       gulp
+      
   4-3 webpack
+  
   4-4 Rollup
+  
   4-5 Parcel
   
 5. 스타일링
+
   5-1 CSS 전처리기
+  
       Sass/CSS
+      
       PostCSS
+      
       Less
+      
       Stylus
       
   5-2 CSS Frameworks
+  
       Bootstrap
+      
       Materialize,Material UI, Material Design Lite
       Bulma
+      
       Semantic UI
       
+      
   5-3 CSS 아키텍쳐
+  
       BEM
+      
       CSS Moduels
+            
       Atomic
+      
       OOCSS
+      
       SMACSS
+      
       SUITCSS
       
   5-4 CSS in JS
+  
       Styled Components
-      Radium
-      Emotion
-      JSS
-      Aphrodite
       
+      Radium
+      
+      Emotion
+      
+      JSS
+      
+      Aphrodite
+            
 6. 상태 관리
+
   6-1 Component State/Context API
+  
   6-2 Redux
+  
       a. Async actions(Side Effects)
+      
         - Redux Thunk
+        
         - Redux Better Promise
+        
         - Redux Saga
+        
         - Redux Observable
+        
       b. Helpers
+      
         - Rematch
+        
         - Reselect
+        
       c. Data persistence
+      
         - Redux Persist
+        
         - Redux Phoenix
+        
       d. Redux Form
       
   6-3 MobX
