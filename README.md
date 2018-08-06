@@ -35,11 +35,17 @@
       jQuery 라이브러리를 추가적으로 쓰는 것에 익숙해지기
       
 2. 일반적인개발 스킬 
+
       GIT 사용법
+      
       HTTP 또는 HTTP 프로토콜 숙지 request method 숙지 (GET,POST,PUT,PATCH,DELETE,OPTIONS)
+      
       구글 사용을 두려워하지 않기, 구글 검색 기능 
+      
       터미널 사용에 익숙해지기  쉘 설정 (bash,zsh,fish)
+      
       알고리즘 과 자료구조 책 어느정도 읽기
+      
       디자인 패턴 책 어느정도 읽기
       
 3. 공식 웹사이트 또는 과목 코스들을 완주  리액트 관련
@@ -147,86 +153,142 @@
   6-3 MobX
   
 7. 타입 체킹
+
       PropTypes
+      
       TypeScript
+      
       Flow
   
 8. 폼
+
      Redux Form
+     
      Formik
+     
      Formsy
+     
      Final Form
+     
 
 9. 라우팅
+
     React-Router
+    
     Router5
+    
     Redux-First Router
+    
     Reach Router
     
+    
 10. 클라이언트 API
+
   10-1 REST
+  
       Fetch
+      
       SuperAgent
+      
       axios
       
   10-2 GraphQL
+  
       Apollo
+      
       Relay
+      
       urql
       
 11. 유틸리티 라이브러리
+
       Lodash
+      
       Moment
+      
       classnames
+      
       Numeral
+      
       RxJS
+      
       Ramda
   
 12. 테스팅
+
   12-1  Unit Testing
+  
       Jest
+      
       Enzyme
+      
       Sinon
+      
       Mocha
+      
       Chai
+      
       AVA
+      
       Tape
+      
   12-2 E2E Testing
+  
       Selenium,Webdriver
+      
       Cypress
+      
       Puppeteer
+      
       Cucumber.js
+      
       Nightwatch.js
       
   12-3 통합 테스트
+  
       Karma
       
 13. 국제화 
+
       React Intl
+      
       React i18next
+      
   
 14. SSR(Server Side Rendering)
+
       Next.js
+      
       After.js
+      
       Rogue
   
 15. 정적 사이트 전환
+
       Gatsby
       
-16. 백엔드 프레임워크 
+16. 백엔드 프레임워크
+
       React on Rails
+      
       Node.js with Mongo or Mysql
       
 17. 모바일
+
       React Native
+      
       Cordova/Phonegap
       
 18. 데스크탑
+
       Proton Native
+      
       Electron
+      
       React Native Windows
       
 19. VR
+
   19-1  React 360
   
  
