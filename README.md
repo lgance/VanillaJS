@@ -8,9 +8,9 @@
 1. 기본
   1-1 HTML5
   
-   ~~HTML5의 기본 숙지
+   ~~HTML5의 기본 숙지~~
       
-      여러 기본 페이지들을 만들어 보기 
+   ~~여러 기본 페이지들을 만들어 보기~~ 
       
   1-2 CSS3
   
@@ -22,13 +22,13 @@
       
   1-3 JS기본
   
-   ~~JS 기본 구문에 익숙해지기 ( var arr = []; arr.push('test'); )
+   ~~JS 기본 구문에 익숙해지기 ( var arr = []; arr.push('test'); )~~
       
-   ~~기본 DOM 조작 사용하기  (document.querySelector, document.getElementById ... )
+   ~~기본 DOM 조작 사용하기  (document.querySelector, document.getElementById ... )~~
       
-   ~~JS 동작에 매커니즘 이해하기 (hoisting, Event Bubbling, Event Capturing, Prototyping)
+   ~~JS 동작에 매커니즘 이해하기 (hoisting, Event Bubbling, Event Capturing, Prototyping)~~
       
-   ~~AJAX 호출 해보기 (GET,POST)
+   ~~AJAX 호출 해보기 (GET,POST)~~
       
    새로운 JS 기능들을 배우기 (ES6+)
       
