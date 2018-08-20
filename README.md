@@ -14,11 +14,11 @@
       
   1-2 CSS3
   
-      CSS3 기본 숙지 
+   ~~CSS3 기본 숙지~~ 2018-08-20
       
-      이전단계 HTML 로 만들어보았던 페이지에 스타일을 입혀 보기 
+   ~~이전단계 HTML 로 만들어보았던 페이지에 스타일을 입혀 보기~~ 2018-08-20
       
-      해당 페이지를 grid 와 flexbox로 만들어 보기 ( display:flex; flex-direction:row; ....  ) 
+   ~~해당 페이지를 grid 와 flexbox로 만들어 보기 ( display:flex; flex-direction:row; ....  )~~ 2018-08-20
       
   1-3 JS기본
   
@@ -28,11 +28,11 @@
       
    ~~JS 동작에 매커니즘 이해하기 (hoisting, Event Bubbling, Event Capturing, Prototyping)~~
       
-   ~~AJAX 호출 해보기 (GET,POST)~~
+   ~~AJAX 호출 해보기 (GET,POST)~~ 
       
-   새로운 JS 기능들을 배우기 (ES6+)
+   ~~새로운 JS 기능들을 배우기 (ES6+)~~ 2018-08-20
       
-   jQuery 라이브러리를 추가적으로 쓰는 것에 익숙해지기
+   ~~jQuery 라이브러리를 추가적으로 쓰는 것에 익숙해지기~~  2018-08-20
       
 2. 일반적인개발 스킬 
 
@@ -40,21 +40,21 @@
       
       HTTP 또는 HTTP 프로토콜 숙지 request method 숙지 (GET,POST,PUT,PATCH,DELETE,OPTIONS)
       
-      구글 사용을 두려워하지 않기, 구글 검색 기능 
+      ~~구글 사용을 두려워하지 않기, 구글 검색 기능~~
       
-      터미널 사용에 익숙해지기  쉘 설정 (bash,zsh,fish)
+      ~~터미널 사용에 익숙해지기  쉘 설정 (bash,zsh,fish)~~
       
-      알고리즘 과 자료구조 책 어느정도 읽기
+      ~~알고리즘 과 자료구조 책 어느정도 읽기~~
       
       디자인 패턴 책 어느정도 읽기
       
-3. 공식 웹사이트 또는 과목 코스들을 완주  리액트 관련
+3. 공식 웹사이트 또는 과목 코스들을 완주  리액트 관련 (ing)
       
 4. 사용하여야 하는 툴들에 익숙해지기
 
   4-1 패키지 매니저
   
-      npm
+   ~~npm~~ 2018-08-20
       
       yarn
       
@@ -62,7 +62,7 @@
       
   4-2 작업 실행
   
-      npm scripts
+   ~~npm scripts~~ 2018-08-20
       
       gulp
       
@@ -154,7 +154,7 @@
   
 7. 타입 체킹
 
-      PropTypes
+      ~~PropTypes~~ 2018-08-20
       
       TypeScript
       
@@ -224,9 +224,9 @@
       
       Sinon
       
-      Mocha
+   ~~Mocha~~
       
-      Chai
+   ~~Chai~~
       
       AVA
       
@@ -234,15 +234,15 @@
       
   12-2 E2E Testing
   
-      Selenium,Webdriver
+   ~~Selenium,Webdriver~~ 2018-08-20
       
       Cypress
       
-      Puppeteer
+   ~~Puppeteer~~ 2018-08-20
       
-      Cucumber.js
+      Cucumber.js      
       
-      Nightwatch.js
+   ~~Nightwatch.js~~ 2018-08-20
       
   12-3 통합 테스트
   
