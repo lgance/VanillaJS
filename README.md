@@ -74,9 +74,9 @@
   
 5. 스타일링
 
-  5-1 CSS 전처리기
+  ~~5-1 CSS 전처리기~~
   
-      Sass/CSS
+   ~~Sass/CSS~~
       
       PostCSS
       
@@ -86,7 +86,7 @@
       
   5-2 CSS Frameworks
   
-      Bootstrap
+   ~~Bootstrap~~
       
       Materialize,Material UI, Material Design Lite
       Bulma
