@@ -9,6 +9,7 @@ ip:port /dummys 로 GET 요청시
 요청 예
 
 columns 20개 rows 50개
+
      localhost:3505/dummys?columns=20&rows=50
 
 
