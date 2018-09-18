@@ -9,7 +9,7 @@ var homePath = path.join(__dirname,'../');
 router.get('/',(req,res,next)=>{
 
     res.send('<h1> dummyServer Home </h1>');
-        clientInfo(req);
+    clientInfo(req);
 
 
 });
