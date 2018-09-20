@@ -1,0 +1,438 @@
+
+body, html{
+    height:100%;
+    width:100%;
+    padding:0;
+    margin:0;
+
+}
+div *:after{
+    box-sizing:inherit;
+}
+div *:before{
+    box-sizing:inherit;
+}
+/* div.board-wrapper{
+    background-color:#D5D5D5;
+    width:inherit;
+    height:inherit;
+    margin:3px;
+    padding:5px;
+} */
+
+
+div#board {
+    display:inline-block;
+    background-color:#D5D5D5;
+    /* width:100%;
+    height:100%; */
+    height:100vh;
+    width:100vw;
+    overflow:auto;
+    position:absolute;
+    min-width:800px;
+    min-height:600px;
+  
+}
+
+div.postit{
+    display:inline-block;
+    background-color:#FAED7D;
+    /* max-width:inherit;
+    max-height:inherit; */
+    width:250px;
+    height:200px;
+    min-width:250px;
+    min-height:30px;
+    position:absolute;
+    margin:1px;
+    /* -webkit-box-sizing:border-box; */
+
+}
+
+div.postit-up{
+    display:inline-block;
+    background-color:#FAED7D;
+    /* max-width:inherit;
+    max-height:inherit; */
+    
+    height:15px;
+    min-width:250px;
+    min-height:15px;
+    position:absolute;
+    margin:1px;
+    /* -webkit-box-sizing:border-box; */
+
+}
+div.postit-up .postit-title{
+    text-align:right;
+    cursor:Move;
+    width:100%;
+    height:12px;
+    min-height:12px;
+    max-height:12px;
+ 
+    position:relative;
+    /* display:inline-block; */
+    border-bottom: 1px solid #000000;
+    padding: 0px 0px 2px 0px;
+    
+    display:flex;
+    align-items:center;
+    justify-content: flex-end;
+
+}
+div.postit-up .postit-title > .arrow-up{
+    cursor:Default;
+    display:inline-block;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 8px solid #000000;
+    
+}
+div.postit-up .postit-title > .arrow-down{
+    cursor:Default;
+    display:inline-block;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 8px solid #000000;
+    
+}
+div.postit-up .postit-title > .close-up{
+    position:relative;
+    display:inline  ;
+  /* background: rgb(0, 0, 0); */
+  
+    cursor:Pointer;
+  /* width:0;
+  height:0; */
+    /* margin:0px -4px 0px -4px; */
+ 
+    top:0;
+    border:0;
+    background-color:rgba(0,0,0,0);
+
+}
+div.postit-up .postit-title > .close-up:focus{
+   outline:none;
+}
+
+div.postit-up .postit-title > .close-up::before{
+    width:100%;
+    content:"\d7";
+    font-size:14px;
+    color:rgb(0, 0, 0);
+    font-weight:bold;
+   
+}
+
+div.postit .postit-title{
+    text-align:right;
+    cursor:Move;
+    width:100%;
+    height:12px;
+    min-height:12px;
+    max-height:12px;
+ 
+    position:relative;
+    /* display:inline-block; */
+    border-bottom: 1px solid #000000;
+    padding: 0px 0px 2px 0px;
+    
+    display:flex;
+    align-items:center;
+    justify-content: flex-end;
+}
+
+div.postit .postit-title > .arrow-up{
+    cursor:Default;
+    display:inline-block;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 8px solid #000000;
+
+  /* vertical-align: middle;
+        margin-top: -1px;
+        margin-left: 6px;
+        margin-right: -14px; */
+        /*디스플레이 변경 */
+   
+    /* vertical-align:middle; */
+  
+    /* margin :0px -4px 15px 0px; */
+
+}
+
+
+div.postit .postit-title > .arrow-down{
+    cursor:Default;
+    display:inline-block;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    /* border-bottom: 8px solid #000000; */
+    border-top:8px solid #000000;
+ 
+}
+div.postit .postit-title > .close-up{
+    position:relative;
+    display:inline  ;
+  /* background: rgb(0, 0, 0); */
+  
+    cursor:Pointer;
+  /* width:0;
+  height:0; */
+    /* margin:0px -4px 0px -4px; */
+ 
+    top:0;
+    border:0;
+    background-color:rgba(0,0,0,0);
+
+}
+div.postit .postit-title > .close-up:focus{
+   outline:none;
+}
+
+div.postit .postit-title > .close-up::before{
+    width:100%;
+    content:"\d7";
+    font-size:14px;
+    color:rgb(0, 0, 0);
+    font-weight:bold;
+   
+}
+
+div.postit .postit-body{
+    width:inherit;
+    height:-webkit-calc(100% - 15px);
+    /* background-color:#0100FF; */
+    /* box-sizing:border-box; */
+
+}
+div.postit-up .postit-body{
+    display:none;
+
+}
+
+div.postit .postit-body > .input-body{
+    
+    width:inherit;
+    height:-webkit-calc(100%);
+    position:relative;
+    /* runtime Changed  
+    div.postit .postit-body height 값  */
+    
+    /* overflow:hidden; */
+
+}
+/* 사이즈 바인데 별론거 같음*/
+div.postit .postit-body > .input-body .body-size{
+    position:absolute;
+    right : 1%;
+    bottom : 1%;
+    width: 10px;
+    height : 10px;
+    /* background-color:red; */
+    /* z-index:2; */
+    cursor:nw-resize;
+}
+div.postit .postit-body > .input-body textarea{
+    font-size:12px;
+    color:#000000;
+    background-color:transparent;
+    width:-webkit-calc(100% - 4px);
+    height:-webkit-calc(100% - 4px);
+    border:0;
+    resize: none; 
+    overflow-y:auto;
+    cursor:default;
+}
+div.postit .postit-body > .input-body textarea::-webkit-scrollbar-thumb{
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+   
+}
+
+div.postit .postit-body > .input-body textarea:focus{
+    /* outline:red solid 5px; */
+    outline:none;
+}
+
+
+/* 보드 컨텍스트 메뉴  */
+
+div#board-menu {
+
+ visibility:hidden;
+ display:inline-block;
+ background-color:#FFFFFF;
+ position:absolute;
+ z-index:99;
+
+
+}
+div#board-menu ul{
+    margin:0;
+    padding:0;
+}
+
+div#board-menu li{
+ list-style :none;
+ cursor:Pointer;
+ user-select: none;
+ 
+ margin:0;
+ padding:0;
+}
+div#board-menu li:hover{
+    background-color:#B2EBF4;
+}
+/* postit menu */
+div#postit-menu {
+    visibility:hidden;
+    display:inline-block;
+    position:absolute;
+    background-color:#FFFFFF;
+    border:1px solid #000000;
+    padding:8px;
+    z-index:2;
+}
+
+div#postit-menu ul{
+    margin:0;
+    padding-left:20px;
+    margin-right:15px;
+    margin-bottom:15px;
+}
+
+div#postit-menu li{
+    list-style :none;
+    user-select:none;
+    display:flex;
+    align-items:center;
+    margin:2px 0px 0px 0px;
+}
+
+
+
+/*  옵션 색상 지정 방법  */
+div#postit-menu select option:hover{
+    background-color:yellow;
+
+}
+
+div.menu-separator{
+    margin:5px 0px;
+    border-top:2px solid #000000;
+}
+
+
+div#postit-menu .select-selected{
+    display:inline-block;
+    box-sizing:border-box;
+    padding:2px;
+    position:relative;
+    margin:0px 0px 0px 2px;
+    width:50px;
+    height:20px;
+    /* border :1px solid #000000; */
+    /* font-size=  12px; */
+    background-color:yellow;
+    border :1px solid transparent;
+    z-index:1;
+}
+div#postit-menu .select-selected:hover{
+    border:1px solid red;
+}
+
+div#postit-menu .select-selected::after{
+    position:absolute;
+    content:"";
+    top:40%;
+    right:10%;
+    width:0;
+    height:0;
+    border :5px solid transparent;
+    border-color:black transparent transparent transparent;
+    z-index:2
+ 
+}    
+div#postit-menu .select-selectedOpen{
+    display:inline-block;
+    box-sizing:border-box;
+    padding:2px;
+    position:relative;
+    margin:0px 0px 0px 2px;
+    width:50px;
+    height:20px;
+    /* border :1px solid #000000; */
+    /* font-size=  12px; */
+    background-color:yellow;
+    border :1px solid transparent;
+}
+div#postit-menu .select-selectedOpen:hover{
+    border:1px solid red;
+}
+div#postit-menu .select-selectedOpen::after{
+    position:absolute;
+    content:"";
+    top:20%;
+    right:10%;
+    width:0;
+    height:0;
+    border :5px solid transparent;
+    border-color:transparent transparent black transparent;
+}    
+
+div#postit-menu .select-itemsOpen{
+    display:inline-block;
+    position: absolute;
+    top: 100%;
+    left:0;
+    right:0;
+    border-width:0px 1px 1px 1px;
+    margin-top:1px;
+    margin-right:5px;
+    padding-right:5px;
+    z-index:99:
+  }
+
+  div#postit-menu .select-itemsOpen div{
+    cursor: pointer;
+    width:50px;
+    height:20px;
+    z-index:99;
+
+   
+}
+div#postit-menu .select-itemsOpen div:hover{
+    border:1px solid red;
+ }
+
+
+ div#postit-menu .select-itemsOpen div:nth-child(1) {
+    background-color:#00D8FF;
+ }
+
+ div#postit-menu .select-itemsOpen div:nth-child(2) {
+    background-color:#FFB2F5;
+  
+ }
+
+ div#postit-menu .select-itemsOpen div:nth-child(3) {
+    background-color:yellow;
+   
+ }
+ div#postit-menu ul select {
+    margin:0px 0px 0px 2px;
+    width:50px;
+    height:20px;
+}
+
