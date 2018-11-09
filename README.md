@@ -36,9 +36,9 @@
       
 2. 일반적인개발 스킬 
 
-      ~~GIT 사용법 2018-11-09
+      ~~GIT 사용법~~ 2018-11-09
       
-      ~~HTTP 또는 HTTP 프로토콜 숙지 request method 숙지 (GET,POST,PUT,PATCH,DELETE,OPTIONS) 2018-11-09
+      ~~HTTP 또는 HTTP 프로토콜 숙지 request method 숙지 (GET,POST,PUT,PATCH,DELETE,OPTIONS)~~ 2018-11-09
       
       ~~구글 사용을 두려워하지 않기, 구글 검색 기능~~ 2018-08-20
       
