@@ -36,9 +36,9 @@
       
 2. 일반적인개발 스킬 
 
-      GIT 사용법
+      ~~GIT 사용법 2018-11-09
       
-      HTTP 또는 HTTP 프로토콜 숙지 request method 숙지 (GET,POST,PUT,PATCH,DELETE,OPTIONS)
+      ~~HTTP 또는 HTTP 프로토콜 숙지 request method 숙지 (GET,POST,PUT,PATCH,DELETE,OPTIONS) 2018-11-09
       
       ~~구글 사용을 두려워하지 않기, 구글 검색 기능~~ 2018-08-20
       
@@ -46,9 +46,9 @@
       
       ~~알고리즘 과 자료구조 책 어느정도 읽기~~   2018-08-20
       
-      디자인 패턴 책 어느정도 읽기
+      ~~디자인 패턴 책 어느정도 읽기 2018-11-09
       
-3. 공식 웹사이트 또는 과목 코스들을 완주  리액트 관련 (ing)
+~~3. 공식 웹사이트 또는 과목 코스들을 완주  리액트 관련 (ing) 2018-11-09 리액트를 다루는 기술 
       
 4. 사용하여야 하는 툴들에 익숙해지기
 
@@ -74,7 +74,7 @@
   
 5. 스타일링
 
-  ~~5-1 CSS 전처리기~~
+  ~~5-1 CSS 전처리기~~ 
   
    ~~Sass/CSS~~
       
@@ -86,7 +86,7 @@
       
   5-2 CSS Frameworks
   
-   ~~Bootstrap~~
+   ~~Bootstrap~~ 2018-08-01
       
       Materialize,Material UI, Material Design Lite
       Bulma
@@ -98,7 +98,7 @@
   
       BEM
       
-      CSS Moduels
+   ~~CSS Moduels~~ 2018-11-09
             
       Atomic
       
@@ -110,7 +110,7 @@
       
   5-4 CSS in JS
   
-      Styled Components
+   ~~Styled Components~~ 2018=11-09
       
       Radium
       
@@ -124,7 +124,7 @@
 
   6-1 Component State/Context API
   
-  6-2 Redux
+  6-2 ~~Redux~~  2018-11-09     
   
       a. Async actions(Side Effects)
       
@@ -206,7 +206,7 @@
       
       Moment
       
-      classnames
+      ~~classnames~~ 2018-11-09 css연결 
       
       Numeral
       
@@ -271,7 +271,7 @@
 
       React on Rails
       
-      Node.js with Mongo or Mysql
+      ~~Node.js with Mongo or Mysql~~ 2018-11-09 ing 끝없이 진행 
       
 17. 모바일
 
