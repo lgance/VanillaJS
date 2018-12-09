@@ -1,0 +1,51 @@
+﻿1. 
+	HTML5라면
+	!doctype html 을 선언
+
+	페이지 내의 언어 속성 과 글자 방향을 정확히 부여
+	<html lang="ko" dir="ltr">
+이외 index.html 에 주석과 함께 작성 
+
+head  태그의 display 를 inline으로 수정 시
+
+<style> 내부 주석값이 보임
+
+role="banner" 
+role="navigation" 
+   속성의 이유
+
+aria-label 속성이란?
+
+최신 reset.css 또는 normalize .css 사용
+
+웹폰트는 2MB이하여야함
+
+display
+	block 레벨 기본 Element로는 p와 form ,header,footer,section 등 
+	inline 레벨 기본 Element span  단락의흐름을 방해하지않음
+	none script태그나 style head title 태그등 기본이 none (inline 으로했더니 주석 이랑 내용이 화면에 표시됨)
+	>visibility 와 다름 none의 경우는 화면에 없는것처럼 렌더링 
+	visibility hidden 은 영역은 차지함
+
+** margin: 0 auto; // block 레벨의 엘리먼트를 중앙으로 세움 
+
+css에서 벤더 프리픽스(vender prefix)
+	vender - 자동판매
+	prefix - 접두사
+	-moz,-webkit-,-o-,-ms-등을 사용하여 브라우저에서 판독이 가능하게 하는것
+최근 트렌디는 전체 작성보다는 Codekit Compass grunt,webpack 등의 도움을 받음
+
+-webkit-   : 사파리, 크롬
+-moz-      : 파이어폭스
+-o-        : 오페라
+-ms-      : IE
+
+position 
+	absolute는 부모의 위치를 기준으로 삼지만
+	첫번째로 position : relative를 갖는 부모를 기준으로 삼는다. 유의
+
+div 같은 block 레벨의 영역에서 앞선 태그에서 float를 사용하였다면 화면에 떠잇는 경우가 있기 때문에
+
+그다음 태그에서 float:clear를 통해 꼭 해제 해주어야 한다. (clear:left, right, both 중 선택)
+
+

@@ -1,0 +1,104 @@
+
+
+header{
+    display:inline-block;
+    height:65px;
+    width:100%;
+    background-color:goldenrod;
+    overflow:hidden;
+
+    /* test Style*/
+    border:2px solid black;
+}
+
+footer{
+   height:40px;
+
+}
+
+
+
+
+div#app-root{
+    display:inline-block;
+    width:inherit;
+    height:inherit;
+    margin:inherit;
+}
+
+
+main {
+    display:block;
+    border:5px solid black;
+    height:calc(100% - 150px);
+    background-color:red;
+    max-width:1200px;
+    min-height:200px;
+    margin:0 auto;
+
+    overflow:auto;
+
+}
+.mainWrapper{
+    display:block;
+    height:100%;
+    padding:10px;
+    overflow: hidden;
+    background-color:#B5B2FF;
+}
+
+.mainWrapper section{
+    display:inline-block;
+   
+    margin-left:10px;
+    background-color:#FAE0D4;
+    width:calc(80% - 20px);
+    height:inherit;
+    margin-right:-5px;
+}
+
+aside{
+    display:inline-block;
+    vertical-align:top;
+    width:20%;
+    height:inherit;
+    overflow-y:auto;
+    overflow-x:hidden;
+    background-color:#FAF4C0;
+    margin-right:-5px;
+
+ 
+}
+@media (max-width:480px){
+    .mainWrapper{
+       overflow:auto;
+    }
+    aside{
+        display:block;
+        width:100%;
+        height:auto;
+        overflow:unset;
+    }
+    .mainWrapper section{
+        display:block;
+        margin-left:0px;
+        height:auto;
+        width:100%;
+    }
+}
+/* 640보다 크면 노랑색*/
+@media (min-width:640px){
+    aside{
+        background-color:yellow;
+    }
+  
+}
+/* 1024보다 크면 파랑색*/
+@media (min-width:1024px){
+    aside{
+        background-color:blue;
+        color:white;
+    }
+
+}
+

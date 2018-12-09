@@ -28,39 +28,39 @@
     <!-- 문자집합 선언 -->
         <meta charset="utf-8"/>
     <!-- Internet Explorer에게 최신의 렌더링 엔진을 사용 지시 -->    
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <!-- Meta  Description -->
-        <meta name="author" content="jaeuk_lee">
-        <meta name="description" content="깍돌이 스터디 페이지입니다.">
-        <meta name="front-end-study" content="front-QA ">
+        <meta name="author" content="jaeuk_lee"/>
+        <meta name="description" content="깍돌이 스터디 페이지입니다."/>
+        <meta name="front-end-study" content="front-QA "/>
     <!-- -->
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://example.com/page.html">
-        <meta property="og:title" content="Content Title">
-        <meta property="og:image" content="https://example.com/image.jpg">
-        <meta property="og:description" content="Description Here">
-        <meta property="og:site_name" content="Site Name">
-        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://example.com/page.html"/>
+        <meta property="og:title" content="Content Title"/>
+        <meta property="og:image" content="https://example.com/image.jpg"/>
+        <meta property="og:description" content="Description Here"/>
+        <meta property="og:site_name" content="Site Name"/>
+        <meta property="og:locale" content="en_US"/>
     <!-- css는 무조건 js보다 먼저 로딩이 되어야 한다. -->
-
-
+        <link rel="stylesheet" type="text/css" href="./lib/css/index.css"/>
+        <link rel="stylesheet" type="text/css" href="./lib/css/normalize.css"/>
 
         <title>GDL VanillaJS Pages</title>
 </head>
 
 <style>
-/* Component Control Area*/
+/* Component Control Area */
 /* div.controlArea{
     display:inline-block;
     height:50px;
-    width:100%;
+    width:100%;sss
     background-color:aquamarine
 } */
 </style>
 <body>
 
     <div id="app-root">
-        <div class="center-wrapper">
+    
         <!-- header section 의 role="banner" 필수 -->
             <header role="banner">
                 <div class="HeaderImage"></div>
@@ -71,25 +71,63 @@
                     </pre>
                     
                 </div>
-                
             </header>
             
             
         <!-- main 태그의 role="main" -->
             <main role="main">
-                        Main
+                <div class="mainWrapper">
+                    <aside >
+                            <div>naviagtion Div</div>
+                            Main margin 0 auto 
+                        
+                            <div>Secton 222Div</div>
+                            <div>Secton 222Div</div>
+                            <div>Secton 222Div</div>
+                            <div>Secton 222Div</div>
+                            <div>Secton 222Div</div>
+                            <div>Secton 222Div</div>
+                            <div>Secton 222Div</div>
+                            <div>Secton 222Div</div>
+                            <div>Secton 222Div</div>
+                            <div>Secton 222Div</div>
+                            <div>Secton 222Div</div>
+                            <div>Secton 222Div</div>
+                            <div>Secton 222Div</div>
+                            <div>Secton 222Div</div>
+                    </aside>
+                    <section>     
+                            <div>Secton Div</div>
+                            <div>Secton 222Div</div>
+                            <div>Secton Div</div>
+                            <div>Secton Div</div>
+                            <div>Secton Div</div>
+                            <div>Secton Div</div>
+                            <div>Secton Div</div>
+                            <div>Secton Div</div>
+                            <div>Secton Div</div>
+                            <div>Secton Div</div>
+
+                    </section>
+                </div>
             </main>
 
         <!-- nav 태그의 role="navigation" -->
-            <nav role="navigation"> Nav </nav>
+         
 
             <article> Article</article>
-            <aside> Aside </aside>
+           <nav role="navigation">
+                <ul>
+                        <li>Host</li>
+                        <li>Guest</li>
+
+                </ul>    
+            </nav>
      
             <footer>
                         Footer
             </footer>
-        </div>
+      
     </div><!-- app-root-->
     <script src="./lib/gdl.js"> </script>
 </body>

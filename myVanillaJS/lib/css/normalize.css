@@ -1,5 +1,14 @@
 *{
+/* 표준  */
     box-sizing:border-box;
+/* -webkit  : 사파리, 크롬 */
+    -webkit-box-sizing:border-box;
+/* -moz      : 파이어폭스  */
+    -moz-box-sizing:border-box;
+/*  -o        : 오페라 */
+    -o-box-sizing:border-box;
+/*  -ms      : IE  IE 8 이상만 지원 */
+    -ms-box-sizing:border-box;
 }
 
 html,body{
@@ -9,6 +18,4 @@ html,body{
     height:100%;
     overflow:auto;
     background:white;
-
-    
 }
