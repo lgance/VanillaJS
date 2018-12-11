@@ -18,4 +18,11 @@ html,body{
     height:100%;
     overflow:auto;
     background:white;
+
+    font-size:18px;
+
+}
+
+h1{
+    display:inline;   
 }

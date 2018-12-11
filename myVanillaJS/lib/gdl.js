@@ -20,12 +20,32 @@ Gdl = (function(){
         // IE
         !!navigator.userAgent.match(/Trident/i) ? 'ie' : 'unknown';
     }
+    function generatedUUID(){
+        function s4() {
+            return Math.floor((1 + Math.random()) * 0x10000)
+              .toString(16)
+              .substring(1);
+          }
+          return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+            s4() + '-' + s4() + s4() + s4();
+    }
+    function generateUUIDMIT() { // Public Domain/MIT
+        var d = new Date().getTime();
+        if (typeof performance !== 'undefined' && typeof performance.now === 'function'){
+            d += performance.now(); //use high-precision timer if available
+        }
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+            var r = (d + Math.random() * 16) % 16 | 0;
+            d = Math.floor(d / 16);
+            return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+        });
+    }
 
     function initialize(){
     // Browser Setting
         getBrowser();
         return{
-
+            generatedUUID:generatedUUID
         }
     }
     
