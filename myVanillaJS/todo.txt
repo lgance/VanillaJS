@@ -39,10 +39,11 @@ css에서 벤더 프리픽스(vender prefix)
 -moz-      : 파이어폭스
 -o-        : 오페라
 -ms-      : IE
+** 벤더 프리픽스를 우선적으로 사용후 기본 속성을 지정한다.
 
 position 
 	absolute는 부모의 위치를 기준으로 삼지만
-	첫번째로 position : relative를 갖는 부모를 기준으로 삼는다. 유의
+	첫번째로 position : relative 를 갖는 부모를 기준으로 삼는다. 유의
 
 div 같은 block 레벨의 영역에서 앞선 태그에서 float를 사용하였다면 화면에 떠잇는 경우가 있기 때문에
 

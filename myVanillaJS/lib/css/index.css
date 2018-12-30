@@ -1,12 +1,14 @@
 div#app-root{
-    display:inline-block;
+    /* display:inline-block; */
+    display:block;
+    /* display:inline; */
     width:inherit;
     height:inherit;
     margin:inherit;
+    /* float:left; */
+    overflow:unset;
+    
 }
-
-
-
 
 /* header CSS */
 
@@ -16,12 +18,18 @@ header{
     flex-flow:nowrap row;
     align-items:center;
 
-    height:65px;
+    height:45px; 
+    /* 65지만 padding 10 계산  */
     width:100%;
-    background-color:goldenrod;
     overflow:hidden;
+    padding:10px 60px;
+    box-shadow :0 0 1px rgba(0,0,0,0.25);
+
     /* test Style*/
-    border:2px solid black;
+    /* border:2px solid black; */
+
+
+    /* background-color:goldenrod; */
 
 
     /* display:inline-block; */
@@ -36,7 +44,6 @@ header{
 header .UserControl .headerText{
     font-size:1.2rem;
     font-weight:600;
-
 }
 
 
@@ -48,14 +55,15 @@ header .UserControl .headerText{
 
 main {
     display:block;
-    border:5px solid black;
-    height:calc(100% - 150px);
-    background-color:red;
-    max-width:1200px;
-    min-height:200px;
-    margin:0 auto;
+    /* 테스트용 css 제거  */
+    /* border:5px solid black; */
+    /* background-color:red; */
 
-    overflow:auto;
+    height:calc(100% - 150px);
+    max-width:1200px;
+    min-height:190px;
+    margin:0 auto;
+    overflow:unset;
 
 }
 .mainWrapper{
@@ -63,19 +71,20 @@ main {
     height:100%;
     padding:10px;
     overflow: hidden;
-    background-color:#B5B2FF;
+    /* 테스트용 css 제거  */
+    /* background-color:#B5B2FF; */
 }
 
-.mainWrapper section{
+.mainWrapper article{
     display:inline-block;
-   
     margin-left:10px;
-    background-color:#FAE0D4;
     width:calc(80% - 20px);
     height:inherit;
     margin-right:-5px;
-
     overflow-y:auto;
+
+    /* background-color:#FAE0D4; */
+
 }
 
 aside{
@@ -85,23 +94,41 @@ aside{
     height:inherit;
     overflow-y:auto;
     overflow-x:hidden;
-    background-color:#FAF4C0;
     margin-right:-5px;
+
+
+    max-width:250px;
+    /* background-color:#FAF4C0; */
+
 
  
 }
 /*  480 다 작아지면 vertical scroll */
 @media (max-width:480px){
-    .mainWrapper{
-       overflow:auto;
+    div#app-root{
+        overflow-y:auto;
     }
+    main{
+        height:auto;
+    }
+    header{
+        height:25px;
+    }
+    header .UserControl .headerText{
+        display:block;
+        text-align:center;
+        font-size:0.5rem;
+        font-weight:600;
+        line-height:25px;
+    }
+    
     aside{
         display:block;
         width:100%;
         height:auto;
         overflow:unset;
     }
-    .mainWrapper section{
+    .mainWrapper article{
         display:block;
         margin-left:0px;
         height:auto;
@@ -109,14 +136,23 @@ aside{
         
         overflow-y:unset;
     }
+    nav{
+        display:block;
+
+    }
+    footer{
+        display:block;
+    }
     html{
         font-size:10px;
     }
 }
 @media (min-width:480px) and (max-width:640px){
-   
+    main{
+        min-height:135px;
+    }
     aside{
-        background-color:red;
+        /* background-color:red; */
     }
     html{
         font-size:12px;
@@ -126,7 +162,7 @@ aside{
 /* 640보다 크면 노랑색*/
 @media (min-width:640px){
     aside{
-        background-color:yellow;
+        /* background-color:yellow; */
 
     }
     html{
@@ -137,20 +173,47 @@ aside{
 /* 1024보다 크면 파랑색*/
 @media (min-width:1024px){
     aside{
-        background-color:blue;
-        color:white;
+        /* background-color:blue; */
+        /* color:white; */
     }
     html{
         font-size:16px;
     }
 
 }
+/* 1280보다 크면 */
+@media (min-width:1280px){
+    main{
+        min-width:100%;
+    }
+
+}
 
 
+nav{
+    height:45px;
+}
+nav ul{
+    height:inherit;
+}
+/* nav CSS */
+nav ul li{
+    cursor:pointer;
+    list-style:none;
+    /* float:left; */
+    display:inline-block;
+}
 
 
 /* footer CSS*/
 
 footer{
     height:40px;
+    float:both;
+ }
+ footer span.pages_desc{
+    display:block;
+    color:#cdcdcd;
+    text-align:center;
+    line-height: 40px;
  }
