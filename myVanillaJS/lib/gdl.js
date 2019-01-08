@@ -24,10 +24,27 @@ Gdl = (function(){
     }
     function gdlOtherModuleLoading(){
         var arr = ['gdlAjax','tempEvent'];
+        // 나머지 모듈 비동기로드 
+        // arr.reduce(function(prev,curr,index,arr){
+        //         Util.include(curr+'.js');
+        // },0);
 
+        // 현재는 동기로드 
         arr.reduce(function(prev,curr,index,arr){
-                Util.include(curr+'.js');
+             Util.include({
+                path:curr+'.js',
+                jsfileName:curr,
+                async:false,
+                onload : function(){
+                    console.warn('임시 테스트 코드 온로드 확인 ',tt);
+                }
+            });
         },0);
+
+
+
+
+
 
     }
     function initialize(){
@@ -36,7 +53,11 @@ Gdl = (function(){
             gdlUtilModuleLoading();
             setTimeout(function(){
                 gdlOtherModuleLoading();
-            },1000)
+            },100);
+
+
+            // gdlOtherModuleLoading();
+
         });
 
         return{
