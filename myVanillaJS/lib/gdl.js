@@ -42,10 +42,6 @@ Gdl = (function(){
         },0);
 
 
-
-
-
-
     }
     function initialize(){
         document.addEventListener("DOMContentLoaded", function() {
