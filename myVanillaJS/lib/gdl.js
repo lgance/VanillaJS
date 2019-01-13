@@ -1,5 +1,5 @@
 
-
+var section_ = document.querySelector('main section');
 
 // Utility
 Gdl = (function(){
