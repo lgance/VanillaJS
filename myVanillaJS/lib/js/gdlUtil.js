@@ -13,54 +13,62 @@ var Util = (function(){
      * 
      * position = body or head 
      */
-
+// path 만 넣으면 비동기 로딩 
+// 
     Util.include = function(path,configs){
-        if(typeof path==='object' && typeof configs ==='undefined'){
-            var configs = path;
-            path = configs.path;
-        }
-
-        var async =configs!==undefined ?
-                   (configs.async!==undefined ? 
-                   configs.async : true) : true;
-                   
-        var pathArr = path.replace(/\.js/gi,'').split('/');
-        var fullPath = Util.basePath+pathArr.join('/')+'.js';
-        var jsfileName = configs!==undefined?
-                        (configs.jsfileName !==undefined ?
-                        configs.jsfileName : path) :
-                        path;
-    // create Script tag
-        var scriptTags = document.createElement('script');
-            scriptTags.setAttribute('src',fullPath);
-            scriptTags.async = async;
-
-        var onload = configs!==undefined? 
-                        configs.onload : 
-                        'undefined';
-        if(typeof onload==='function'){
-            scriptTags.onload = function (){
-                onload(fullPath);
+        try{
+            if(typeof path==='object' && typeof configs ==='undefined'){
+                var configs = path;
+                path = configs.path;
+                if(typeof path==='undefined')
+                    throw new Error('path is Undefined');
             }
-        }
-        else {
-             scriptTags.onload = function(){
-                 console.log('onLoad Script >> '+ fullPath);
-             }
-        };
-    // append script tag in document body 
-        document.body.insertBefore(scriptTags,document.body.lastChild);
 
-        // logicNameArray.forEach(function(item,index,arr){
-        //     path = dirPath.concat(item,'.js');
-        //     var logicScriptTags = document.createElement('script');
-        //         logicScriptTags.setAttribute('src',path);
-        //         logicScriptTags.async = false; // sync Loading;
-        //         logicScriptTags.onload = function(){
-        //                 console.warn('Script Loading : ',item.concat('.js'));
-        //         }
-        //     document.body.insertBefore(logicScriptTags,document.body.lastChild);
-        // })
+            var async =configs!==undefined ?
+                    (configs.async!==undefined ? 
+                    configs.async : true) : true;
+            
+            var pathArr = path.replace(/\.js/gi,'').split('/');
+            var fullPath = Util.basePath+pathArr.join('/')+'.js';
+            var jsfileName = configs!==undefined?
+                            (configs.jsfileName !==undefined ?
+                            configs.jsfileName : path) :
+                            path;
+        // create Script tag
+            var scriptTags = document.createElement('script');
+                scriptTags.setAttribute('src',fullPath);
+                scriptTags.async = async;
+
+            var onload = configs!==undefined? 
+                            configs.onload : 
+                            'undefined';
+            if(typeof onload==='function'){
+                scriptTags.onload = function (){
+                    onload(fullPath);
+                }
+            }
+            else {
+                scriptTags.onload = function(){
+                    console.log('onLoad Script >> '+ fullPath);
+                }
+            };
+        // append script tag in document body 
+            document.body.insertBefore(scriptTags,document.body.lastChild);
+
+            // logicNameArray.forEach(function(item,index,arr){
+            //     path = dirPath.concat(item,'.js');
+            //     var logicScriptTags = document.createElement('script');
+            //         logicScriptTags.setAttribute('src',path);
+            //         logicScriptTags.async = false; // sync Loading;
+            //         logicScriptTags.onload = function(){
+            //                 console.warn('Script Loading : ',item.concat('.js'));
+            //         }
+            //     document.body.insertBefore(logicScriptTags,document.body.lastChild);
+            // })
+        }
+        catch(err){
+            console.error(err);
+        }
     }
     Util.generatedUUID = function(){
         var d = new Date().getTime();
