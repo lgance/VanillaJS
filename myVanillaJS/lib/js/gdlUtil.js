@@ -84,6 +84,23 @@ var Util = (function(){
             s4() + '-' + s4() + s4() + s4();
     }
 
+    Util.isObject = function(obj){
+        try{
+            var isObj;
+            if(typeof obj!==object){
+                throw new Error(obj+' is Not Object');
+            }
+            if(Object.keys(obj).length===0){
+                throw new Error('Object is Empty');
+            }
+            return isObj;
+        }
+        catch(err){
+            console.error(err);
+        }
+
+    }
+
     Util.getBrowser = function(){
             // 크롬
         return _browser = typeof _browser!=='undefined' ? _browser  : 
