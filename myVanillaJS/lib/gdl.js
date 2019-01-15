@@ -36,7 +36,7 @@ Gdl = (function(){
                 jsfileName:curr,
                 async:false,
                 onload : function(){
-                    console.warn('임시 테스트 코드 온로드 확인 ',tt);
+                    console.warn('임시 테스트 코드 온로드 확인 ',curr);
                 }
             });
         },0);
