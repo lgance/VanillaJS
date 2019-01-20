@@ -1,63 +1,68 @@
 
 var section_ = document.querySelector('main section');
 
+
 // Utility
 Gdl = (function(){
     var instance;
     // Gdl Properties
     var _browser;
 
+    var libraryLogic = ['gdlUtil','gdlAjax','gdlComponent','tempEvent'];
+    var basePath = './lib/js/';
+  
 
-    function gdlUtilModuleLoading(){
-        var utilTag = document.createElement('script');
-        var path = './lib/js/gdlUtil.js';
-        // utilTag.setAttribute('src',path);
-                                //gdlUtil.js
-        utilTag.src = path;
-        utilTag.async = false;
-        utilTag.onload = function(){
-            console.log('gdlUtil Loading');
+    // 미사용
+    function create(obj){
+        if(!Util.isObject(obj)){
+            return;
         }
-        // document.head.appendChild(src);
-        // document.body.insertBefore(src,document.body.lastChild);
-        document.body.appendChild(utilTag,document.body.lastChild);
+
+        var config = obj["config"];
+        var xhr = new XMLHttpRequest;
+        var url = 'http:./'+config;
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState ===4){
+                    if(xhr.status===200){
+                        console.log('success');
+                        console.log(xhr);
+                    }
+                    else{
+                        console.error('error');
+                    }
+            }
+
+
+        }
+        console.log(url);
+        xhr.open('GET',url,true);
+        xhr.send();
     }
-    function gdlOtherModuleLoading(){
-        var arr = ['gdlAjax','tempEvent'];
-        // 나머지 모듈 비동기로드 
-        // arr.reduce(function(prev,curr,index,arr){
-        //         Util.include(curr+'.js');
-        // },0);
-
-        // 현재는 동기로드 
-        arr.reduce(function(prev,curr,index,arr){
-             Util.include({
-                path:curr+'.js',
-                jsfileName:curr,
-                async:false,
-                onload : function(){
-                    console.warn('임시 테스트 코드 온로드 확인 ',curr);
-                }
-            });
-        },0);
-
-
-    }
+    function onload(){}; 
     function initialize(){
+        console.time('logic Load');
+        // library Loading // css js 분기 처리 추후 
+       libraryLogic.reduce(function(prev,curr,index,arr){
+                Util.include({
+                    path:basePath+curr+'.js',
+                    jsfileName:curr,
+                    async:true,
+                    onload : function(){
+                        console.warn('['+(index+1)+'] load Complete ',curr);
+                    }
+                });
+       },0);
+
+       console.timeEnd('logic Load');
+
         document.addEventListener("DOMContentLoaded", function() {
-            console.warn('Windows DOM ContentedLoaded');
-            gdlUtilModuleLoading();
-            setTimeout(function(){
-                gdlOtherModuleLoading();
-            },100);
-
-
-            // gdlOtherModuleLoading();
-
+                // JS HTML load Complete
+                console.warn('DOMCOntentedLoad');
         });
 
         return{
-            
+            create:create,
+            onload:onload
         }
     }
     

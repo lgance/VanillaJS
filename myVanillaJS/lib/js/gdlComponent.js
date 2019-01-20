@@ -12,18 +12,22 @@ var Component = (function(){
 
     
     */
-    Component.createMenu = function(obj){
+    Component.createMenu = function(menu){
         try{
-            if(!Util.isObject(obj)){
-                return false;
+            if(!!Util.isObject(menu)){
+                throw new Error("supported MenuItem is Array");
             }
-        var menuComponent;
-        
+          
+        var menuComponent  = document.createElement('ul');
 
+        var rootMenulength = menu.length;
+            for(var i=0;i<rootMenulength;i++){
+                var menu_1 = document.createElement('li');
 
-
-
-
+                menu_1.innerText = menu[i].text;
+                
+                menuComponent.appendChild(menu_1);
+            }
         return menuComponent;
         }
         catch(err){

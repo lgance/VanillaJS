@@ -1,7 +1,10 @@
-console.warn('start GdlUtil');
+// console.log('gdlUtil .js ');
+
 var Util = (function(){
     function Util(){}
-    Util.basePath = './lib/js/';
+    
+    
+    //     Util.basePath = './lib/js/';
 
     /**
      * configs - [attribute]
@@ -14,9 +17,9 @@ var Util = (function(){
      * position = body or head 
      */
 // path 만 넣으면 비동기 로딩 
-// 
     Util.include = function(path,configs){
         try{
+            // {} 형태일떄
             if(typeof path==='object' && typeof configs ==='undefined'){
                 var configs = path;
                 path = configs.path;
@@ -24,12 +27,20 @@ var Util = (function(){
                     throw new Error('path is Undefined');
             }
 
+
             var async =configs!==undefined ?
-                    (configs.async!==undefined ? 
-                    configs.async : true) : true;
+            typeof configs==='boolean' ?
+            configs :
+            (configs.async!==undefined ? 
+            configs.async : true) : true;
             
+
+
+
             var pathArr = path.replace(/\.js/gi,'').split('/');
-            var fullPath = Util.basePath+pathArr.join('/')+'.js';
+
+            var fullPath = path;
+
             var jsfileName = configs!==undefined?
                             (configs.jsfileName !==undefined ?
                             configs.jsfileName : path) :
@@ -53,7 +64,8 @@ var Util = (function(){
                 }
             };
         // append script tag in document body 
-            document.body.insertBefore(scriptTags,document.body.lastChild);
+            // document.body.insertBefore(scriptTags,document.body.lastChild);
+            document.head.appendChild(scriptTags);
 
             // logicNameArray.forEach(function(item,index,arr){
             //     path = dirPath.concat(item,'.js');
@@ -95,16 +107,22 @@ var Util = (function(){
     Util.isObject = function(obj){
         try{
             var isObj;
-            if(typeof obj!==object){
+            if(typeof obj!=="object"){
                 throw new Error(obj+' is Not Object');
             }
             if(Object.keys(obj).length===0){
                 throw new Error('Object is Empty');
             }
+            // Array
+            if(!![].push){
+                return false;
+            }
+            isObj = true;
             return isObj;
         }
         catch(err){
             console.error(err);
+            return false;
         }
 
     }
@@ -152,5 +170,3 @@ var gdlUtil = {
 
 
 
-
-console.warn('end Gdl Util');

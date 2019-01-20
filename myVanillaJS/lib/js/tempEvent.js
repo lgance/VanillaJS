@@ -1,4 +1,0 @@
-
-
-
-console.warn('tempEvent.js');

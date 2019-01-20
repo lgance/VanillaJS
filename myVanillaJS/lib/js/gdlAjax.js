@@ -1,4 +1,4 @@
-console.warn('gdlAjax .js ');
+// console.log('gdlAjax .js ');
 var Ajax = function(){
     function Ajax(){}
     Ajax.call = function(url,settings){

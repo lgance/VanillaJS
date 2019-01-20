@@ -72,8 +72,9 @@
     <!-- css는 무조건 js보다 먼저 로딩이 되어야 한다. -->
         <link rel="stylesheet" type="text/css" href="./lib/css/normalize.css"/>
         <link rel="stylesheet" type="text/css" href="./lib/css/index.css"/>
-        
- 
+
+        <script src="./lib/js/gdlUtil.js"></script>
+        <script src="./lib/gdl.js"> </script>
         <title>GDL VanillaJS Pages</title>
 </head>
 
@@ -87,6 +88,7 @@
 } */
 </style>
 <body>
+     
     <div id="app-root">
         <!-- header section 의 role="banner" 필수 -->
             <header role="banner">
@@ -102,31 +104,10 @@
             <main role="main">
                 <div class="mainWrapper">
                     <aside >
-                            <div class="btnCreate">Button Create</div>
-                            Main margin 0 auto 
-                        
-                            <div>Secton 222Div</div>
-                            <div>Secton 222Div</div>
-                            <div>Secton 222Div</div>
-                            <div>Secton 222Div</div>
-                            <div>Secton 222Div</div>
-                            <div>Secton 222Div</div>
-                            <div>Secton 222Div</div>
-                            <div>Secton 222Div</div>
-                            <div>Secton 222Div</div>
-                            <div>Secton 222Div</div>
-                            <div>Secton 222Div</div>
-                            <div>Secton 222Div</div>
-                            <div>Secton 222Div</div>
-                            <div>Secton 222Div</div>
+
                     </aside>
                     <article>
-                        <section>
-                            <div>Secton Div</div>
-                            <div>Secton 222Div</div>
-                            <div>Secton Div</div>
-                            <div>Secton Div</div>
-                        </section>    
+                     
                     <section>
                         <div>Secton Div</div>
                         <div>Secton 222Div</div>
@@ -187,7 +168,17 @@
             </footer>
       
     </div><!-- app-root-->
-    <script src="./lib/gdl.js"> </script>
+   
+    
+    <script>
+       var baseUrl="./logic/";
+       var arrayLogic = ["main.js"];
+
+        for(var i=0;i<arrayLogic.length;i++){
+            Util.include(baseUrl+arrayLogic[i],false);
+        }
+    </script>
+
 </body>
 
 </html>
