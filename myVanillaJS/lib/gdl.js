@@ -8,11 +8,13 @@ Gdl = (function(){
     // Gdl Properties
     var _browser;
 
-    var libraryLogic = ['gdlUtil','gdlAjax','gdlComponent','tempEvent'];
-    var basePath = './lib/js/';
-  
+    // var libraryLogic = ['gdlUtil','gdlAjax','gdlComponent','tempEvent'];
+    var libraryLogic = ['gdlAjax','gdlComponent','tempEvent'];
 
-    // 미사용
+
+
+    var basePath = './lib/js/';
+    // 미사용 로컬에선 사용 불가능 WAS위에선 가능 
     function create(obj){
         if(!Util.isObject(obj)){
             return;
@@ -32,15 +34,20 @@ Gdl = (function(){
                     }
             }
 
-
         }
         console.log(url);
         xhr.open('GET',url,true);
         xhr.send();
     }
+    
+    
+    
     function onload(){}; 
+
     function initialize(){
         console.time('logic Load');
+
+        Util.loadCSS('./lib/css/gdlComponentStyle/GdlComponent.css');
         // library Loading // css js 분기 처리 추후 
        libraryLogic.reduce(function(prev,curr,index,arr){
                 Util.include({
@@ -59,10 +66,9 @@ Gdl = (function(){
                 // JS HTML load Complete
                 console.warn('DOMCOntentedLoad');
         });
-
+        
         return{
-            create:create,
-            onload:onload
+         
         }
     }
     

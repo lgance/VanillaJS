@@ -1,11 +1,21 @@
-// console.log('gdlUtil .js ');
+console.log('gdlUtil.js Start');
 
 var Util = (function(){
     function Util(){}
     
     
     //     Util.basePath = './lib/js/';
+    Util.loadCSS = function(path){
+        try{
+            let link = document.createElement('link');
+            link.href = path;
+            link.rel='stylesheet';
+            document.head.appendChild(link);
+            
+        }
+        catch(err){console.error(err);}
 
+    }
     /**
      * configs - [attribute]
      * 
@@ -26,21 +36,14 @@ var Util = (function(){
                 if(typeof path==='undefined')
                     throw new Error('path is Undefined');
             }
-
-
             var async =configs!==undefined ?
             typeof configs==='boolean' ?
             configs :
             (configs.async!==undefined ? 
             configs.async : true) : true;
-            
-
-
 
             var pathArr = path.replace(/\.js/gi,'').split('/');
-
             var fullPath = path;
-
             var jsfileName = configs!==undefined?
                             (configs.jsfileName !==undefined ?
                             configs.jsfileName : path) :
@@ -63,20 +66,8 @@ var Util = (function(){
                     console.log('onLoad Script >> '+ fullPath);
                 }
             };
-        // append script tag in document body 
-            // document.body.insertBefore(scriptTags,document.body.lastChild);
-            document.head.appendChild(scriptTags);
 
-            // logicNameArray.forEach(function(item,index,arr){
-            //     path = dirPath.concat(item,'.js');
-            //     var logicScriptTags = document.createElement('script');
-            //         logicScriptTags.setAttribute('src',path);
-            //         logicScriptTags.async = false; // sync Loading;
-            //         logicScriptTags.onload = function(){
-            //                 console.warn('Script Loading : ',item.concat('.js'));
-            //         }
-            //     document.body.insertBefore(logicScriptTags,document.body.lastChild);
-            // })
+            document.head.appendChild(scriptTags);
         }
         catch(err){
             console.error(err);
@@ -110,18 +101,17 @@ var Util = (function(){
             if(typeof obj!=="object"){
                 throw new Error(obj+' is Not Object');
             }
-            if(Object.keys(obj).length===0){
-                throw new Error('Object is Empty');
+            else if(Object.keys(obj).length===0){
+                throw new Error('this is Empty');
             }
-            // Array
-            if(!![].push){
-                return false;
+            else if(obj instanceof Array){
+                throw new Error('this is Array');
             }
             isObj = true;
             return isObj;
         }
         catch(err){
-            console.error(err);
+            console.debug(err);
             return false;
         }
 
@@ -159,14 +149,9 @@ var gdlUtil = {
         }
 
     }
-
-
-
-
-
 }
 
 
-
+console.log('gdlUtil.js End');
 
 

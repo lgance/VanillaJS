@@ -1,0 +1,66 @@
+
+
+/*  
+    drawer or lnbMenu
+
+*/
+.gdlMenu {
+    cursor:pointer;
+    background-color:#a4a6c1;
+}
+
+.gdlMenu li{
+    cursor:pointer;
+    background-color:red;
+}
+
+.gdlMenu li:active{
+    cursor:pointer;
+    background-color: blue;
+}
+.gdlMenu li:hover{
+    cursor:pointer;
+    background-color: orange;
+}
+
+
+
+
+/*
+    Button
+
+*/
+
+
+.gdlButton{
+    display:inline-block;
+
+    min-width:40px;
+    min-height:30px;
+
+    line-height:30px;
+    text-align:center;
+    
+    color:#FFFFFF;
+    border-radius:0.35em;
+
+    /* 줄사이 간격  */
+    /* letter-spacing:0.20em; */
+    cursor:pointer;
+
+    border:0;
+    outline:0;
+    background-color:#4261e0;
+}
+
+.gdlButton:hover{
+    background-color:#829afa;
+    box-shadow:0 80px 0 0;
+}
+
+.gdlButton:active{
+    background-color:#b9de68;    
+}
+
+
+
