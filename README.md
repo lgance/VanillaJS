@@ -1,6 +1,8 @@
 # Vanilla JS
 This is my playground with Vanilla JS and WebPack
 
+# TypeScript to Vanilla JS 
+This is my playground with TypeScript to Vanilla JS (components)
 
 
 Basic Readme
