@@ -10,7 +10,7 @@ ip:port /dummys 로 GET 요청시
 
 columns 20개 rows 50개
 
-     localhost:3505/dummys?columns=20&rows=50
+     localhost:3505/dummys/condition?columns=20&rows=50
 
 
 
