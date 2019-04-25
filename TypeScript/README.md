@@ -3,7 +3,7 @@ This is my playground with TypeScript to Vanilla JS (components)
 
 ## Getting Started
 
-바닐라 JS로 있던 부분들을 TypeScript 로 다시 진행하려고합니다. 기본적인 위젯들 부터 하나씩 차근차근 진행 
+바닐라 JS로 있던 부분들을 TypeScript 로 재 진행
 
 ### Prerequisites
 
