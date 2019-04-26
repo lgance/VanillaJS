@@ -3,7 +3,7 @@
   "extends": ["tslint:latest", "tslint-config-prettier"],
   "jsRules": {},
   "rules": {
-    "semicolon": true
+    // "semicolon": true
   },
   "rulesDirectory": []
 }
