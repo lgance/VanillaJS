@@ -1,7 +1,7 @@
 node/node_modules
 dummyServer/node_modules
 
-TypeScript/node_modules
-TypeScript/test.*
+myTypeScript/node_modules
+myTypeScript/test.*
 
 ReactTest

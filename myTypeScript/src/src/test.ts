@@ -24,5 +24,5 @@ function show(param: Person) {
 }
 let show_ = show(user);
 console.log(show_);
-as;
+
 let test = "test";
